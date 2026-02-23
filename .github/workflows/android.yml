@@ -35,7 +35,7 @@ jobs:
       run: ./gradlew build
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: get-device.apk
         path: app/build/outputs/apk/debug/app-debug.apk
@@ -46,7 +46,7 @@ jobs:
         ref: main
         
     - name: Download artifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
       with:
         name: get-device.apk
         path: app/build/outputs/apk/debug
